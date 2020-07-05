@@ -1,0 +1,32 @@
+﻿@model string
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ADO - Transfer Money</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Transfer $100 from Putin to Trump</h1>
+        @if (Model != null)
+        {
+            <h2 class="alert alert-danger">@Model</h2>
+        }
+        <form method="post">
+            <div class="form-group">
+                <label>Throw Excepton</label>
+                <select name="throwEx" class="form-control">
+                    <option>false</option>
+                    <option>true</option>
+                </select>
+            </div>
+            <div class="text-center panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">Transfer</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
